@@ -17,15 +17,17 @@ char * mystrcpy( char *dest, char *source){
     return dest;
 }
 
-char *mystrncat(char *dest, char *source, int n)
-{
-    int len = mystrlen(dest);
-    int i;
-
-    for(i = 0; i < n && source[i]; i++) {
-        dest[len + i] = source[i];
+char *mystrncat(char *dest, char *source, int n){
+    int i = 0;
+    char *destp = dest;
+    while(*destp){
+        destp++;
+        i++;
     }
-
+    while(n){
+        dest[i] = *source;
+        n--;
+    }
     return dest;
 }
 
