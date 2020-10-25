@@ -7,5 +7,8 @@ main.o: main.c mystring.h
 mystring.o: mystring.c
 	gcc -c mystring.c
 
+run:
+	./mystring
+
 clean:
-	rm .o
+	rm *.o
